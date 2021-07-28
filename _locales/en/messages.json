@@ -1,0 +1,30 @@
+{
+    "name": {
+        "message": "Poptabs",
+        "description": "Name of this extension."
+    },
+    "description": {
+        "message": "Simple shortcuts for moving tabs to new windows",
+        "description": "Description of this extension."
+    },
+    "pop-this-tab": {
+        "message": "This tab",
+        "description": "Menu item for Poptabs > This tab"
+    },
+    "pop-tabs-to-the-right": {
+        "message": "This tab and tabs to the right",
+        "description": "Menu item for Poptabs > This tab and tabs to the right"
+    },
+    "pop-highlighted-tabs": {
+        "message": "Highlighted tabs",
+        "description": "pop-highlighted-tabs menu item"
+    },
+    "poptabs_this_command": {
+        "message": "Pop active tab into a new window",
+        "description": "Keyboard shortcut label for pop-this-tab"
+    },
+    "poptabs_right_command": {
+        "message": "Pop active tab + tabs to right into a new window",
+        "description": "Keyboard shortcut label for pop-tabs-to-the-right"
+    }
+}

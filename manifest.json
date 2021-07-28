@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "__MSG_name__",
+    "version": "0.0.1",
+    "description": "__MSG_description__",
+    "author": "Will Woods",
+    "homepage_url": "https://github.com/wgwoods/poptabs",
+    "permissions": [
+        "menus"
+    ],
+    "default_locale": "en",
+    "icons": {
+        "48": "icon.svg",
+        "96": "icon.svg"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "commands": {
+        "pop-this-tab": {
+            "suggested_key": {
+                "default": "Ctrl+Space"
+            },
+            "description": "__MSG_poptabs_this_command__"
+        },
+        "pop-tabs-to-the-right": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Space"
+            },
+            "description": "__MSG_poptabs_right_command__"
+        }
+    }
+}
