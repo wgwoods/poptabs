@@ -7,7 +7,7 @@ on:
 
 jobs:
   lint:
-    name: "Lint"
+    name: "web-ext lint"
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout"
@@ -17,5 +17,5 @@ jobs:
         uses: kewisch/action-web-ext@v1
         with:
           cmd: lint
-          source: src
+          source: .
           channel: listed
