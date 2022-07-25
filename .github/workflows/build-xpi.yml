@@ -1,0 +1,36 @@
+name: "Build XPI"
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+  workflow_dispatch:
+    inputs:
+      ref:
+        required: true
+        type: string
+        default: "main"
+
+jobs:
+  build:
+    name: "Build XPI"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: "Build XPI with web-ext"
+        id: web-ext-build
+        uses: kewisch/action-web-ext@v1
+        with:
+          cmd: build
+          source: .
+          filename: "{name}-{version}.xpi"
+
+      - name: "Upload XPI Artifact"
+        uses: actions/upload-artifact@master
+        with:
+          name: target.xpi
+          path: ${{ steps.web-ext-build.outputs.target }}
